@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bronzeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#CD7F32" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#8B4513" stop-opacity="0.9"/>
+    </linearGradient>
+    <linearGradient id="silverGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E0E6ED" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#94A3B8" stop-opacity="0.9"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FBBF24" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#D97706" stop-opacity="0.9"/>
+    </linearGradient>
+    <linearGradient id="quarantineGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EF4444" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#991B1B" stop-opacity="0.8"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <style>
+    .node-title { font-family: system-ui, -apple-system, sans-serif; font-weight: 700; font-size: 15px; fill: #FFFFFF; }
+    .node-sub { font-family: system-ui, -apple-system, sans-serif; font-weight: 400; font-size: 11px; fill: #CBD5E1; }
+    .label { font-family: system-ui, -apple-system, sans-serif; font-weight: 600; font-size: 14px; fill: #38BDF8; }
+  </style>
+
+  <rect width="1000" height="500" rx="16" fill="#0B1120" stroke="#1E293B" stroke-width="2"/>
+
+  <g opacity="0.12">
+    <line x1="0" y1="100" x2="1000" y2="100" stroke="#38BDF8" stroke-width="1"/>
+    <line x1="0" y1="200" x2="1000" y2="200" stroke="#38BDF8" stroke-width="1"/>
+    <line x1="0" y1="300" x2="1000" y2="300" stroke="#38BDF8" stroke-width="1"/>
+    <line x1="0" y1="400" x2="1000" y2="400" stroke="#38BDF8" stroke-width="1"/>
+    <line x1="200" y1="0" x2="200" y2="500" stroke="#38BDF8" stroke-width="1"/>
+    <line x1="400" y1="0" x2="400" y2="500" stroke="#38BDF8" stroke-width="1"/>
+    <line x1="600" y1="0" x2="600" y2="500" stroke="#38BDF8" stroke-width="1"/>
+    <line x1="800" y1="0" x2="800" y2="500" stroke="#38BDF8" stroke-width="1"/>
+  </g>
+
+  <rect x="30" y="25" width="380" height="36" rx="8" fill="#1E293B" stroke="#334155"/>
+  <text x="45" y="49" class="label">AlphaLake: Medallion Data Lakehouse Pipeline</text>
+
+  <rect x="30" y="420" width="940" height="55" rx="10" fill="#0F172A" stroke="#0284C7" stroke-width="1.5" stroke-dasharray="4"/>
+  <text x="50" y="452" font-family="system-ui" font-weight="700" font-size="14" fill="#38BDF8">⚡ Apache Airflow DAG Orchestration</text>
+  <text x="340" y="452" font-family="system-ui" font-size="12" fill="#94A3B8">Scheduled Daily ETL @ 06:00 UTC | Automated Retries | Task Dependencies | Terraform IaC</text>
+
+  <g transform="translate(30, 95)">
+    <rect width="140" height="125" rx="12" fill="#1E293B" stroke="#3B82F6" stroke-width="1.5"/>
+    <text x="15" y="30" class="node-title">Ingestion</text>
+    <text x="15" y="55" class="node-sub">• Alpha Vantage API</text>
+    <text x="15" y="75" class="node-sub">• Synthetic Generator</text>
+    <text x="15" y="95" class="node-sub">• Rate-Limit &amp; Jitter</text>
+    <text x="15" y="115" class="node-sub">• Pydantic Schemas</text>
+  </g>
+
+  <path d="M 170 157 L 220 157" stroke="#38BDF8" stroke-width="2"/>
+
+  <g transform="translate(220, 85)">
+    <rect width="150" height="145" rx="12" fill="#1E293B" stroke="#10B981" stroke-width="1.5"/>
+    <text x="15" y="30" class="node-title" fill="#34D399">Quality Gates</text>
+    <text x="15" y="55" class="node-sub">• Great Expectations v1.x</text>
+    <text x="15" y="75" class="node-sub">• Schema Drift Check</text>
+    <text x="15" y="95" class="node-sub">• Null &amp; Type Validator</text>
+    <text x="15" y="115" class="node-sub">• SHA-256 Checksums</text>
+    <text x="15" y="135" class="node-sub">• Quarantine Routing</text>
+  </g>
+
+  <path d="M 295 230 L 295 285" stroke="#EF4444" stroke-width="2" stroke-dasharray="4"/>
+  <g transform="translate(225, 285)">
+    <rect width="140" height="75" rx="10" fill="url(#quarantineGrad)" stroke="#F87171" stroke-width="1.5"/>
+    <text x="15" y="28" class="node-title" font-size="13">🚨 Quarantine S3</text>
+    <text x="15" y="50" class="node-sub">Dead-Letter Queue</text>
+    <text x="15" y="66" class="node-sub">&gt;5% Fail Route</text>
+  </g>
+
+  <path d="M 370 157 L 410 157" stroke="#10B981" stroke-width="2"/>
+
+  <g transform="translate(410, 95)">
+    <rect width="130" height="125" rx="12" fill="url(#bronzeGrad)" stroke="#F59E0B" stroke-width="2"/>
+    <text x="15" y="30" class="node-title" fill="#FFFFFF">🥉 Bronze Layer</text>
+    <text x="15" y="55" class="node-sub" fill="#FEF3C7">• Raw Parquet / S3</text>
+    <text x="15" y="75" class="node-sub" fill="#FEF3C7">• trade_date part.</text>
+    <text x="15" y="95" class="node-sub" fill="#FEF3C7">• Audit metadata</text>
+    <text x="15" y="115" class="node-sub" fill="#FEF3C7">• Immutable logs</text>
+  </g>
+
+  <path d="M 540 157 L 580 157" stroke="#F59E0B" stroke-width="2"/>
+
+  <g transform="translate(580, 95)">
+    <rect width="130" height="125" rx="12" fill="url(#silverGrad)" stroke="#CBD5E1" stroke-width="2"/>
+    <text x="15" y="30" class="node-title" fill="#0F172A">🥈 Silver Layer</text>
+    <text x="15" y="55" class="node-sub" fill="#1E293B">• PySpark Cleanse</text>
+    <text x="15" y="75" class="node-sub" fill="#1E293B">• Deduplication</text>
+    <text x="15" y="95" class="node-sub" fill="#1E293B">• UTC Time Sync</text>
+    <text x="15" y="115" class="node-sub" fill="#1E293B">• Star Schema Dims</text>
+  </g>
+
+  <path d="M 710 157 L 750 157" stroke="#CBD5E1" stroke-width="2"/>
+
+  <g transform="translate(750, 90)">
+    <rect width="140" height="135" rx="12" fill="url(#goldGrad)" stroke="#FDE68A" stroke-width="2"/>
+    <text x="15" y="30" class="node-title" fill="#78350F">🥇 Gold Layer</text>
+    <text x="15" y="55" class="node-sub" fill="#451A03">• Rolling 30d Volatility</text>
+    <text x="15" y="75" class="node-sub" fill="#451A03">• Cumulative Return</text>
+    <text x="15" y="95" class="node-sub" fill="#451A03">• Order Imbalance</text>
+    <text x="15" y="115" class="node-sub" fill="#451A03">• 3.05x Spark Boost</text>
+  </g>
+
+  <path d="M 820 225 L 820 270" stroke="#FBBF24" stroke-width="2"/>
+
+  <g transform="translate(650, 270)">
+    <rect width="320" height="125" rx="12" fill="#1E293B" stroke="#06B6D4" stroke-width="2"/>
+    <text x="20" y="30" class="node-title" fill="#38BDF8">📊 Analytics, Catalog &amp; Visualization</text>
+    <text x="20" y="55" class="node-sub">• AWS Glue Data Catalog external table sync</text>
+    <text x="20" y="75" class="node-sub">• Amazon Athena v3 serverless query engine</text>
+    <text x="20" y="95" class="node-sub">• 6-Page Streamlit &amp; Plotly interactive dashboard</text>
+    <text x="20" y="115" class="node-sub">• Real-time market telemetry &amp; KPIs</text>
+  </g>
+</svg>

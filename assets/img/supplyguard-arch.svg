@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="sgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366F1" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#4338CA" stop-opacity="0.9"/>
+    </linearGradient>
+    <linearGradient id="llmGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EC4899" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#BE185D" stop-opacity="0.9"/>
+    </linearGradient>
+    <linearGradient id="mathGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#047857" stop-opacity="0.9"/>
+    </linearGradient>
+  </defs>
+
+  <style>
+    .sg-title { font-family: system-ui, -apple-system, sans-serif; font-weight: 700; font-size: 15px; fill: #FFFFFF; }
+    .sg-sub { font-family: system-ui, -apple-system, sans-serif; font-weight: 400; font-size: 11px; fill: #E2E8F0; }
+    .sg-label { font-family: system-ui, -apple-system, sans-serif; font-weight: 600; font-size: 14px; fill: #818CF8; }
+  </style>
+
+  <rect width="1000" height="500" rx="16" fill="#0B1120" stroke="#1E293B" stroke-width="2"/>
+
+  <g opacity="0.12">
+    <line x1="0" y1="100" x2="1000" y2="100" stroke="#6366F1" stroke-width="1"/>
+    <line x1="0" y1="200" x2="1000" y2="200" stroke="#6366F1" stroke-width="1"/>
+    <line x1="0" y1="300" x2="1000" y2="300" stroke="#6366F1" stroke-width="1"/>
+    <line x1="0" y1="400" x2="1000" y2="400" stroke="#6366F1" stroke-width="1"/>
+    <line x1="250" y1="0" x2="250" y2="500" stroke="#6366F1" stroke-width="1"/>
+    <line x1="500" y1="0" x2="500" y2="500" stroke="#6366F1" stroke-width="1"/>
+    <line x1="750" y1="0" x2="750" y2="500" stroke="#6366F1" stroke-width="1"/>
+  </g>
+
+  <rect x="30" y="25" width="440" height="36" rx="8" fill="#1E293B" stroke="#334155"/>
+  <text x="45" y="49" class="sg-label">SupplyGuard: Boundary of Determinism Architecture</text>
+
+  <!-- SME Data Sources -->
+  <g transform="translate(30, 95)">
+    <rect width="170" height="150" rx="12" fill="#1E293B" stroke="#6366F1" stroke-width="1.5"/>
+    <text x="15" y="30" class="sg-title" fill="#818CF8">SME Data Ingestion</text>
+    <text x="15" y="55" class="sg-sub">• Tally ERP Ledger Export</text>
+    <text x="15" y="75" class="sg-sub">• GST Compliance History</text>
+    <text x="15" y="95" class="sg-sub">• Delivery Challans</text>
+    <text x="15" y="115" class="sg-sub">• Quality Inspection Passes</text>
+    <text x="15" y="135" class="sg-sub">• Vendor WhatsApp Logs</text>
+  </g>
+
+  <path d="M 200 170 L 260 170" stroke="#6366F1" stroke-width="2"/>
+
+  <!-- Deterministic Math Engine -->
+  <g transform="translate(260, 85)">
+    <rect width="240" height="170" rx="12" fill="url(#mathGrad)" stroke="#34D399" stroke-width="2"/>
+    <text x="15" y="30" class="sg-title">🔒 Deterministic Risk Engine</text>
+    <text x="15" y="55" class="sg-sub">• Zero Hallucination Arithmetic</text>
+    <text x="15" y="75" class="sg-sub">• OTIF Score (On-Time In-Full)</text>
+    <text x="15" y="95" class="sg-sub">• Defect Rate Exponential Clamping</text>
+    <text x="15" y="115" class="sg-sub">• Payment Gap &amp; Volatility Index</text>
+    <text x="15" y="135" class="sg-sub">• Health Score: 0 - 100 Scale</text>
+    <text x="15" y="155" class="sg-sub">• FastAPI / Structured Engine</text>
+  </g>
+
+  <path d="M 500 170 L 560 170" stroke="#10B981" stroke-width="2"/>
+
+  <!-- LLM Context & Reasoning -->
+  <g transform="translate(560, 85)">
+    <rect width="200" height="170" rx="12" fill="url(#llmGrad)" stroke="#F472B6" stroke-width="2"/>
+    <text x="15" y="30" class="sg-title">🤖 Groq LLM Reasoning</text>
+    <text x="15" y="55" class="sg-sub">• Llama-3.3-70B via Groq</text>
+    <text x="15" y="75" class="sg-sub">• Context: Exact Math Scores</text>
+    <text x="15" y="95" class="sg-sub">• Auto-Draft Supplier Memos</text>
+    <text x="15" y="115" class="sg-sub">• Actionable Risk Mitigation</text>
+    <text x="15" y="135" class="sg-sub">• Hindi / English Translation</text>
+    <text x="15" y="155" class="sg-sub">• Buffer Stock Alerts</text>
+  </g>
+
+  <path d="M 760 170 L 810 170" stroke="#EC4899" stroke-width="2"/>
+
+  <!-- Interactive SME UI -->
+  <g transform="translate(810, 95)">
+    <rect width="160" height="150" rx="12" fill="url(#sgGrad)" stroke="#A5B4FC" stroke-width="1.5"/>
+    <text x="15" y="30" class="sg-title">📊 SME Portal</text>
+    <text x="15" y="55" class="sg-sub">• Streamlit Dashboard</text>
+    <text x="15" y="75" class="sg-sub">• Plotly Risk Heatmaps</text>
+    <text x="15" y="95" class="sg-sub">• 1-Click WhatsApp Draft</text>
+    <text x="15" y="115" class="sg-sub">• Vendor Tier Matrix</text>
+    <text x="15" y="135" class="sg-sub">• Real-Time Alerts</text>
+  </g>
+
+  <!-- Bottom Banner for Hackathon Recognition -->
+  <rect x="30" y="300" width="940" height="165" rx="14" fill="#111827" stroke="#F59E0B" stroke-width="1.5"/>
+  <text x="50" y="335" font-family="system-ui" font-weight="700" font-size="16" fill="#FBBF24">🏆 InnovateZ GenZ Hackathon 2026 (Zentiti) — Top 11 Finalist (Out of 600+ Teams)</text>
+  <text x="50" y="365" font-family="system-ui" font-size="13" fill="#E5E7EB">• Evaluated by industry judges for solving real manufacturing bottleneck: ₹80,000/day line stall prevention.</text>
+  <text x="50" y="390" font-family="system-ui" font-size="13" fill="#E5E7EB">• High throughput deterministic math guarantees zero hallucinations on vendor balance sheets.</text>
+  <text x="50" y="415" font-family="system-ui" font-size="13" fill="#E5E7EB">• Live production demo deployed on Streamlit Cloud &amp; FastAPI backend architecture.</text>
+  <text x="50" y="445" font-family="system-ui" font-weight="600" font-size="12" fill="#38BDF8">🔗 Live App: supplyguard-3bp4gnbstgqs2ngw7qkme9.streamlit.app | 🔗 GitHub: github.com/kshitizzz10-ux/supplyguard</text>
+</svg>
